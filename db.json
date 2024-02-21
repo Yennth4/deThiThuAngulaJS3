@@ -1,0 +1,28 @@
+{
+  "nhanvien": [
+    {
+      "id": "79a6",
+      "ho_ten": "Nguyen Hai Yen",
+      "sdt": "0848373898",
+      "email": "haiyenng411@gmail.com",
+      "chuc_vu": "Giám đốc",
+      "ngay_sinh": "2024-02-21T17:00:00.000Z"
+    },
+    {
+      "id": "7c65",
+      "ho_ten": "Dang Luu Vu",
+      "sdt": "0987654321",
+      "email": "luudv3@fpt.edu.vn",
+      "chuc_vu": "Trưởng phòng",
+      "ngay_sinh": "2024-01-31T17:00:00.000Z"
+    },
+    {
+      "id": "4670",
+      "ho_ten": "Ngo Tuan Anh",
+      "sdt": "0564821876",
+      "email": "ango@gmail.com",
+      "chuc_vu": "Nhân viên",
+      "ngay_sinh": "2024-01-26T17:00:00.000Z"
+    }
+  ]
+}

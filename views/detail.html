@@ -1,0 +1,46 @@
+<h1 class="text-center mb-3">{{ title }}</h1>
+<form>
+    <div class="mb-3">
+        <label class="form-label">Họ tên:</label>
+        <input disabled type="text" class="form-control" placeholder="Nhập họ và tên" ng-model="nhanvien.ho_ten">
+        <p ng-if="kiemTra.ho_ten" class="text-danger">Vui lòng nhập họ và tên</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Số điện thoại</label>
+        <input disabled type="text" class="form-control" placeholder="Nhập nội dung" ng-model="nhanvien.sdt">
+        <p ng-if="kiemTra.sdt" class="text-danger">Vui lòng nhập số điện thoại</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email:</label>
+        <input disabled type="email" class="form-control" placeholder="Nhập email" ng-model="nhanvien.email">
+        <p ng-if="kiemTra.email" class="text-danger">Vui lòng nhập email</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Chức vụ:</label>
+        <select disabled class="form-select" ng-model="nhanvien.chuc_vu">
+            <option value="" disabled>Chọn thể loại</option>
+            <option value="Trưởng phòng">Trưởng phòng</option>
+            <option value="Nhân viên">Nhân viên</option>
+            <option value="Giám đốc">Giám đốc</option>
+        </select>
+        <p ng-if="kiemTra.chuc_vu" class="text-danger">Vui lòng chọn chức vụ</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ngày sinh:</label>
+        <input disabled type="date" class="form-control" ng-model="nhanvien.ngay_sinh">
+        <p ng-if="kiemTra.ngay_sinh" class="text-danger">Vui lòng nhập ngày sinh</p>
+    </div>
+
+    <div class="mb-3 text-center">
+        <a href="#!/edit/employee/{{ nhanvien.id }}">
+            <button type="submit" class="btn btn-warning">Chỉnh sửa</button>
+          </a>
+          <a href="#!/list-employee">
+            <button class="btn btn-secondary">Quay lại</button>
+          </a>
+    </div>
+</form>

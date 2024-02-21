@@ -1,0 +1,44 @@
+<h1 class="text-center mb-3">{{ title }}</h1>
+<form ng-submit="addNhanVien()">
+    <div class="mb-3">
+        <label class="form-label">Họ tên:</label>
+        <input type="text" class="form-control" placeholder="Nhập họ và tên" ng-model="nhanvien.ho_ten">
+        <p ng-if="kiemTra.ho_ten" class="text-danger">Vui lòng nhập họ và tên</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Số điện thoại</label>
+        <input type="text" class="form-control" placeholder="Nhập số điện thoại" ng-model="nhanvien.sdt">
+        <p ng-if="kiemTra.sdt" class="text-danger">Vui lòng nhập số điện thoại</p>
+        <p ng-if="kiemTra.sdtIsNan" class="text-danger">Số điện thoại phải là số</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email:</label>
+        <input type="email" class="form-control" placeholder="Nhập email" ng-model="nhanvien.email">
+        <p ng-if="kiemTra.email" class="text-danger">Vui lòng nhập email</p>
+        <p ng-if="kiemTra.validateEmail" class="text-danger">Vui lòng nhập email hợp lệ</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Chức vụ:</label>
+        <select class="form-select" ng-model="nhanvien.chuc_vu">
+            <option value="" disabled>Chọn chức vụ</option>
+            <option value="Trưởng phòng">Trưởng phòng</option>
+            <option value="Nhân viên">Nhân viên</option>
+            <option value="Giám đốc">Giám đốc</option>
+        </select>
+        <p ng-if="kiemTra.chuc_vu" class="text-danger">Vui lòng chọn chức vụ</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ngày sinh:</label>
+        <input type="date" class="form-control" ng-model="nhanvien.ngay_sinh">
+        <p ng-if="kiemTra.ngay_sinh" class="text-danger">Vui lòng nhập ngày sinh</p>
+    </div>
+
+    <div class="mb-3 text-center">
+        <button type="submit" class="btn btn-success ">Thêm bài viết</button>
+        <button type="reset" class="btn btn-secondary" >Reset</button>
+    </div>
+</form>
